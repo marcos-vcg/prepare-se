@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+// import { getAnalytics } from "firebase/analytics";
 
 // Optionally import the services that you want to use
 // import {...} from "firebase/auth";
@@ -19,8 +20,10 @@ const firebaseConfig = {
 	measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-const firebase = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
 // For more information on how to access Firebase in your project,
 // see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
 
-export default firebase;
+export default app;
