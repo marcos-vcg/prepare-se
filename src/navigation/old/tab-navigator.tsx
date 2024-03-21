@@ -1,17 +1,13 @@
-import { StyleSheet } from 'react-native';
-
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StackScreenProps } from '@react-navigation/stack';
 
+import { StyleSheet } from 'react-native';
+
+
 import { RootStackParamList } from '.';
-import Home from '../screens/Home';
-import Stock from '../screens/Stock';
-import EmergencyPlans from '../screens/EmergencyPlans';
-import PersonalDefense from '~/screens/PersonalDefense';
-import Health from '../screens/Health';
-
-
+import Home from '../../screens/Home';
+import EmergencyPlans from '../../screens/EmergencyPlans';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,17 +38,7 @@ export default function TabLayout({ navigation }: Props) {
         component={Home}
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name='home' color={color} />,
-
-        }}
-      />
-
-      <Tab.Screen
-        name='Stock'
-        component={Stock}
-        options={{
-          title: 'Stock',
-          tabBarIcon: ({ color }) => <TabBarIcon name='shopping-cart' color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name='code' color={color} />,
 
         }}
       />
@@ -62,31 +48,28 @@ export default function TabLayout({ navigation }: Props) {
         component={EmergencyPlans}
         options={{
           title: 'EmergencyPlans',
-          tabBarIcon: ({ color }) => <TabBarIcon name='warning' color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name='code' color={color} />,
 
         }}
       />
 
-      <Tab.Screen
-        name='PersonalDefense'
-        component={PersonalDefense}
+      {/* <Tab.Screen
+        name='One'
+        component={One}
         options={{
-          title: 'PersonalDefense',
-          tabBarIcon: ({ color }) => <TabBarIcon name='fire' color={color} />,
-
+          title: 'Tab One',
+          tabBarIcon: ({ color }) => <TabBarIcon name='code' color={color} />,
+        
         }}
       />
-
       <Tab.Screen
-        name='Health'
-        component={Health}
+        name='Two'
+        component={Two}
         options={{
-          title: 'Health',
-          tabBarIcon: ({ color }) => <TabBarIcon name='heart' color={color} />,
-
+          title: 'Tab Two',
+          tabBarIcon: ({ color }) => <TabBarIcon name='code' color={color} />,
         }}
-      />
-
+      /> */}
     </Tab.Navigator>
   );
 }

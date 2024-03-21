@@ -20,10 +20,10 @@ const firebaseConfig = {
 	measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-export const app = initializeApp(firebaseConfig);
+export const firebase = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 // For more information on how to access Firebase in your project,
 // see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
 
-export default app;
+export default firebase;
