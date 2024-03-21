@@ -1,12 +1,23 @@
 
-import { ScrollView, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import DefaultView from '~/components/DefaultView';
 import LinkTo from '~/components/LinkTo';
+import ProgressLine from '~/components/ProgressLine';
 
 
 const Page = () => {
     const stockControlList =
-        ['Arroz', 'Feijão', 'Macarrão', 'Sal', 'Açúcar', 'Café', 'Pão']
+        [
+            { name: 'Arroz', qtdMensal: '4', qtdAtual: '1' },
+            { name: 'Feijão', qtdMensal: '2', qtdAtual: '1' },
+            { name: 'Macarrão', qtdMensal: '4', qtdAtual: '1' },
+            { name: 'Sal', qtdMensal: '2', qtdAtual: '1' },
+            { name: 'Açúcar', qtdMensal: '4', qtdAtual: '1' },
+            { name: 'Café', qtdMensal: '4', qtdAtual: '1' },
+            { name: 'Pão', qtdMensal: '4', qtdAtual: '1' },
+        ]
+    // [{ name: 'Arroz', qtdMinimal: { s: "1", m: "4", a: "" } }, 'Feijão', 'Macarrão', 'Sal', 'Açúcar', 'Café', 'Pão']
+
     const energyTypesList =
         [
             { name: 'Elétrica', link: '' },
@@ -31,16 +42,18 @@ const Page = () => {
 
             {stockControlList.map(
                 food => {
-                    return <LinkTo
+                    return <ProgressLine
                         link=''
-                        to={food}
+                        name={food.name}
+                        atual={food.qtdAtual}
+                        ideal={food.qtdMensal}
                     />
                     // <Text className={`text-red-600`}>{food}</Text>
-                    
+
                 }
             )}
 
-            
+
             <Text className={"flex mt-5 text-xl font-bold"}>Energias</Text>
             <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
             <Text className={"flex mt-5 text-xl font-bold"}>Fontes de Energia</Text>
@@ -54,8 +67,8 @@ const Page = () => {
                     // return <Text className={`text-red-600`}>{emergency}</Text>
                 }
             )}
-           
-            </DefaultView>
+
+        </DefaultView>
     );
 
 }

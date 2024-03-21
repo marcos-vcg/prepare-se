@@ -13,7 +13,7 @@ export default function LinkTo({ link, to }: { link: string, to: string, props?:
 
                 <Pressable
                     className={`rounded-md px-1 my-1`}
-                    onPress={() => ''}
+                    onPress={() => link}
                 >
                     <Text>{to}</Text>
                 </Pressable>
