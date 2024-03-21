@@ -1,5 +1,6 @@
 
 import { Text, View } from 'react-native';
+import DefaultView from '~/components/DefaultView';
 import LinkTo from '~/components/LinkTo';
 
 
@@ -16,9 +17,8 @@ const Page = () => {
         ]
 
     return (
-        <View className={"flex items-center flex-1 px-2 mt-4"}>
-            <Text className={`text-xl font-bold`}>Energias</Text>
-            <View className={styles.separator} />
+        <DefaultView title={"Energias"}>
+
             <Text className={styles.title}>Controle das Fontes de Energia</Text>
 
             {emergencyTypesList.map(
@@ -30,7 +30,8 @@ const Page = () => {
                     // return <Text className={`text-red-600`}>{emergency}</Text>
                 }
             )}
-        </View>
+            
+        </DefaultView>
     );
 
 }

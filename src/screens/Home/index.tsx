@@ -1,6 +1,7 @@
 
 import { Text, View } from 'react-native';
 import CardInfo from '~/components/CardInfo';
+import DefaultView from '~/components/DefaultView';
 
 
 const Page = () => {
@@ -8,9 +9,7 @@ const Page = () => {
         ['Incêndio', 'Apagão', 'Falta de Agua', 'Falta de Comida', 'Tsunami', 'Epidemia', 'Guerra']
 
     return (
-        <View className={"flex items-center flex-1 px-2 mt-4"}>
-            <Text className={`text-xl font-bold`}>Home</Text>
-            <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
+        <DefaultView title={"Home"}>
 
             <Text className={`text-xl font-bold`}>Notícias</Text>
             <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
@@ -36,7 +35,7 @@ const Page = () => {
 
             {/* {Gráfico do Estoque} */}
 
-        </View>
+        </DefaultView>
     );
 
 }

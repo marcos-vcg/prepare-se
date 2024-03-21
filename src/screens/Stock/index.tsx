@@ -1,5 +1,6 @@
 
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+import DefaultView from '~/components/DefaultView';
 import LinkTo from '~/components/LinkTo';
 
 
@@ -18,14 +19,11 @@ const Page = () => {
         ]
 
     return (
-        <View className={"flex items-center flex-1 px-2 mt-4"}>
-
-            <Text className={"flex text-xl font-bold"}>Controle de Estoque</Text>
-            <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
+        <DefaultView title={"Controle de Estoque"}>
 
             <Text className={"my-4 text-xl font-bold"}>Controle de Água</Text>
-            <Text className={`text-red-600`}>Potável - 6 Litros</Text>
-            <Text className={`text-red-600`}>Não Tratada - 10 Litros</Text>
+            <Text className={"text-red-600"}>Potável - 6 Litros</Text>
+            <Text className={"text-red-600"}>Não Tratada - 10 Litros</Text>
 
             <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
 
@@ -57,7 +55,7 @@ const Page = () => {
                 }
             )}
            
-        </View>
+            </DefaultView>
     );
 
 }

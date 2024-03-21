@@ -1,5 +1,6 @@
 
 import { Text, View } from 'react-native';
+import DefaultView from '~/components/DefaultView';
 import LinkTo from '~/components/LinkTo';
 
 
@@ -16,11 +17,7 @@ const Page = () => {
         ]
 
     return (
-        <View className={"flex items-center flex-1 px-2 mt-4"}>
-
-            <Text className={"flex text-xl font-bold"}>Planos de Emergência</Text>
-
-            <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
+        <DefaultView title={"Planos de Emergência"}>
 
             <Text className={styles.title}>Situações Críticas</Text>
 
@@ -33,7 +30,8 @@ const Page = () => {
                     // return <Text className={`text-red-600`}>{emergency}</Text>
                 }
             )}
-        </View>
+            
+        </DefaultView>
     );
 
 }

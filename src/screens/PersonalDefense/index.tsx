@@ -2,6 +2,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import CardInfo from '~/components/CardInfo';
+import DefaultView from '~/components/DefaultView';
 
 
 const Page = () => {
@@ -9,10 +10,7 @@ const Page = () => {
         ['Karatê', 'Jiu-Jitsu', 'Muai-Thay', 'Judô']
 
     return (
-        <View className={"flex items-center flex-1 px-2 mt-4"}>
-
-            <Text className={`text-xl font-bold`}>Defesa Pessoal</Text>
-            <View className={"h-[1px] mt-2 mb-4 w-5/6 bg-gray-200"} />
+        <DefaultView title={"Defesa Pessoal"}>
 
             <CardInfo
                 title='Defender a si e ao próximo'
@@ -34,7 +32,7 @@ const Page = () => {
                     return <Text className={`text-red-600`}>{fight}</Text>
                 }
             )}
-        </View>
+        </DefaultView>
     );
 
 }
