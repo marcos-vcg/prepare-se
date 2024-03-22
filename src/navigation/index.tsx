@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import Modal from "../../screens/modal";
 import TabNavigator from "./tab-navigator";
 import AppHeader from "~/components/AppHeader";
+import { StatusBar } from "react-native";
 
 
 export type RootStackParamList = {
@@ -17,6 +18,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 export default function RootStack() {
     return (
         <NavigationContainer>
+            <StatusBar backgroundColor={"#38A69D"} barStyle={"light-content"}></StatusBar>
+            
             <Stack.Navigator initialRouteName="TabNavigator">
                 <Stack.Screen
                     name="TabNavigator"
