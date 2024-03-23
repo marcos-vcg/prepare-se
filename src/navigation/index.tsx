@@ -18,7 +18,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 export default function RootStack() {
     return (
         <NavigationContainer>
-            <StatusBar backgroundColor={"#38A69D"} barStyle={"light-content"}/>
+            {/* <StatusBar backgroundColor={"#38A69D"} barStyle={"light-content"}/> */}
             
             <Stack.Navigator initialRouteName="TabNavigator">
                 <Stack.Screen
