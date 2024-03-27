@@ -36,6 +36,7 @@ export default function TabLayout({ navigation }: Props) {
         headerShown: false,
 
       }}>
+      
 
       <Tab.Screen
         name='Home'
