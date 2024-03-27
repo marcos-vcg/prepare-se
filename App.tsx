@@ -14,7 +14,7 @@ export default function App() {
 	return (
 		<>
 			<StatusBar backgroundColor={"#38A69D"} barStyle={"light-content"} />
-			<AppHeader appName={"Sobrevivencialismo"} />
+			{/* <AppHeader appName={"Sobrevivencialismo"} /> */}
 			<RootStack />
 		</>
 	);

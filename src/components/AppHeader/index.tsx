@@ -1,11 +1,15 @@
 import { Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+// import navigation from '@react-navigation/stack';
 
 
 
 export default function AppHeader({ appName, ...props }: { appName: string, props?: any }) {
+   const navigation = useNavigation()
+   
     return (
         <View className={"flex-row space-x-10 justify-between border-2 border-gray-500 rounded-lg bg-gray-300 mt-10 mx-4"}>
             <View className={"flex-col justify-center m-2"}>
@@ -20,6 +24,10 @@ export default function AppHeader({ appName, ...props }: { appName: string, prop
             {/* <View className={"flex-col items-end m-2 border-black-500 rounded-full bg-red-700 w-10 h-10"}> */}
             <View className={"flex-col items-end m-2"}>
                 <Ionicons name="person-circle" size={30} style={{}} />
+                <Button
+                    onPress={() => navigation.navigate('Modal')}
+                    title="Open Modal"
+                />
                 {/* <FontAwesome size={28} style={{}} /> */}
                 {/* <Image
                     style={{ width: 30, height: 30, }}
