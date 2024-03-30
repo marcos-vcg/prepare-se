@@ -10,6 +10,7 @@ import Stock from '../screens/Stock';
 import EmergencyPlans from '../screens/EmergencyPlans';
 import PersonalDefense from '~/screens/PersonalDefense';
 import Health from '../screens/Health';
+import AppHeader from '~/components/AppHeader';
 
 
 
@@ -29,66 +30,71 @@ export default function TabLayout({ navigation }: Props) {
 
 
   return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarActiveTintColor: 'black',
+    <>
+      <AppHeader appName={"Sobrevivencialismo"} navigation={navigation} />
 
-        headerShown: false,
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: 'black',
+          tabBarStyle: { backgroundColor: 'black'},
 
-      }}>
-      
+          headerShown: false,
 
-      <Tab.Screen
-        name='Home'
-        component={Home}
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name='home' color={color} />,
+        }}>
 
-        }}
-      />
 
-      <Tab.Screen
-        name='Stock'
-        component={Stock}
-        options={{
-          title: 'Stock',
-          tabBarIcon: ({ color }) => <TabBarIcon name='shopping-cart' color={color} />,
+        <Tab.Screen
+          name='Home'
+          component={Home}
+          options={{
+            title: 'Home',
+            tabBarIcon: ({ color }) => <TabBarIcon name='home' color={color} />,
 
-        }}
-      />
+          }}
+        />
 
-      <Tab.Screen
-        name='EmergencyPlans'
-        component={EmergencyPlans}
-        options={{
-          title: 'EmergencyPlans',
-          tabBarIcon: ({ color }) => <TabBarIcon name='warning' color={color} />,
+        <Tab.Screen
+          name='Stock'
+          component={Stock}
+          options={{
+            title: 'Stock',
+            tabBarIcon: ({ color }) => <TabBarIcon name='shopping-cart' color={color} />,
 
-        }}
-      />
+          }}
+        />
 
-      <Tab.Screen
-        name='PersonalDefense'
-        component={PersonalDefense}
-        options={{
-          title: 'PersonalDefense',
-          tabBarIcon: ({ color }) => <TabBarIcon name='fire' color={color} />,
+        <Tab.Screen
+          name='EmergencyPlans'
+          component={EmergencyPlans}
+          options={{
+            title: 'EmergencyPlans',
+            tabBarIcon: ({ color }) => <TabBarIcon name='warning' color={color} />,
 
-        }}
-      />
+          }}
+        />
 
-      <Tab.Screen
-        name='Health'
-        component={Health}
-        options={{
-          title: 'Health',
-          tabBarIcon: ({ color }) => <TabBarIcon name='heart' color={color} />,
+        <Tab.Screen
+          name='PersonalDefense'
+          component={PersonalDefense}
+          options={{
+            title: 'PersonalDefense',
+            tabBarIcon: ({ color }) => <TabBarIcon name='fire' color={color} />,
 
-        }}
-      />
+          }}
+        />
 
-    </Tab.Navigator>
+        <Tab.Screen
+          name='Health'
+          component={Health}
+          options={{
+            title: 'Health',
+            tabBarIcon: ({ color }) => <TabBarIcon name='heart' color={color} />,
+
+          }}
+        />
+
+      </Tab.Navigator>
+    </>
   );
 }
 

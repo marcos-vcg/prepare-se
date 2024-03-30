@@ -20,7 +20,7 @@ export default function RootStack() {
     return (
         <NavigationContainer>
             {/* <StatusBar backgroundColor={"#38A69D"} barStyle={"light-content"}/> */}
-            <AppHeader appName={"Sobrevivencialismo"} />
+            {/* <AppHeader appName={"Sobrevivencialismo"} /> */}
             
             <Stack.Navigator initialRouteName="TabNavigator" screenOptions={{}}>
                 <Stack.Screen
