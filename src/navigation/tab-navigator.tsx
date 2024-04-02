@@ -11,6 +11,7 @@ import EmergencyPlans from '../screens/EmergencyPlans';
 import PersonalDefense from '~/screens/PersonalDefense';
 import Health from '../screens/Health';
 import AppHeader from '~/components/AppHeader';
+import { theme } from 'utils/theme';
 
 
 
@@ -31,12 +32,13 @@ export default function TabLayout({ navigation }: Props) {
 
   return (
     <>
-      <AppHeader appName={"Sobrevivencialismo"} navigation={navigation} />
+      <AppHeader appName={"Sobrevivencialismo"} navigation={navigation} backgroundColor={theme.colors.background.DEFAULT} />
 
       <Tab.Navigator
         screenOptions={{
-          tabBarActiveTintColor: 'black',
-          tabBarStyle: { backgroundColor: 'black'},
+          tabBarActiveTintColor: 'white',
+          // tabBarStyle: { backgroundColor: '#3c3c3c'},
+          tabBarStyle: { backgroundColor: theme.colors.background.DEFAULT },
 
           headerShown: false,
 
