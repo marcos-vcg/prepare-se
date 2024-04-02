@@ -1,24 +1,35 @@
 import { Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
-import { Text, View, Image, Button } from "react-native";
+import { View, Image, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import TextComponent from "~/components/TextComponent";
 // import navigation from '@react-navigation/stack';
 
 
 
-export default function AppHeader({ appName, navigation, ...props }: { appName: string, navigation: any, props?: any }) {
+export default function AppHeader({ appName, navigation, backgroundColor, ...props }: { appName: string, navigation: any, backgroundColor: string, props?: any }) {
 //    const navigation = useNavigation()
    
     return (
-        <View className={"flex-row space-x-10 justify-between border-2 border-gray-500 rounded-lg bg-gray-300 my-3 mx-3"}>
-            <View className={"flex-col justify-center m-2"}>
+        <View
+            className={"flex-row justify-between p-2"}
+            style={{ backgroundColor: backgroundColor }}
+        >
+            {/* <View className={"flex-row space-x-10 justify-between border-2 border-gray-500 rounded-lg bg-gray-300 my-3 mx-3"}> */}
+            <View className={"flex-col justify-center m-2 px-2"}>
                 {/* <View className={"flex-col items-start justify-center m-2 bg-green-300"}></View> */}
-                <Text
-                    className={"flex-row text-xl font-bold leading-6 text-center"}>
+                <TextComponent
+                    className={"text-xl font-bold"}
+                    text={appName}
+                    color="white">
+                </TextComponent>
+
+                {/* <Text> */}
+                    {/* className={"flex-row text-xl font-bold leading-6 text-center"} */}
                     {/* {props?.children} */}
-                    {appName}
-                </Text>
+                    {/* {appName} */}
+                {/* </Text> */}
             </View>
             
             {/* <View className={"flex-col items-end m-2 border-black-500 rounded-full bg-red-700 w-10 h-10"}> */}
@@ -26,7 +37,7 @@ export default function AppHeader({ appName, navigation, ...props }: { appName: 
                 <Ionicons
                     name="person-outline"
                     size={30}
-                    style={{}}
+                    style={{color: 'white'}}
                     onPress={() => navigation.navigate('Profile')}
                 />
                 {/* <Button
