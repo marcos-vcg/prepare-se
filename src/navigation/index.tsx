@@ -6,6 +6,7 @@ import TabNavigator from "./tab-navigator";
 import AppHeader from "~/components/AppHeader";
 import { Button, StatusBar } from "react-native";
 import React from "react";
+import { theme } from 'utils/theme';
 
 
 export type RootStackParamList = {
@@ -15,6 +16,8 @@ export type RootStackParamList = {
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
+
+
 
 export default function RootStack() {
     return (
@@ -26,7 +29,10 @@ export default function RootStack() {
                 <Stack.Screen
                     name="TabNavigator"
                     component={TabNavigator}
-                    options={{ headerShown: false }}
+                    options={{
+                        headerShown: false,
+                    }}
+                    
                 />
                 <Stack.Screen
                     name="Profile"
@@ -39,7 +45,7 @@ export default function RootStack() {
                         headerTitleAlign: "center", 
                         headerTitleStyle: { fontWeight: 'bold', },
                         headerTintColor: '#fff',
-                        headerStyle: { backgroundColor: '#f4511e',},
+                        headerStyle: { backgroundColor: theme.colors.background.DEFAULT,},
                         
 
                         headerRight: () => (
