@@ -8,13 +8,13 @@ import ProgressLine from '~/components/ProgressLine';
 const Page = () => {
     const stockControlList =
         [
-            { name: 'Arroz', qtdMensal: '4', qtdAtual: '1' },
-            { name: 'Feijão', qtdMensal: '2', qtdAtual: '1' },
-            { name: 'Macarrão', qtdMensal: '4', qtdAtual: '1' },
-            { name: 'Sal', qtdMensal: '2', qtdAtual: '1' },
-            { name: 'Açúcar', qtdMensal: '4', qtdAtual: '1' },
-            { name: 'Café', qtdMensal: '4', qtdAtual: '1' },
-            { name: 'Pão', qtdMensal: '4', qtdAtual: '1' },
+            { name: 'Arroz', qtdMensal: 4, qtdAtual: 1 },
+            { name: 'Feijão', qtdMensal: 2, qtdAtual: 1 },
+            { name: 'Macarrão', qtdMensal: 4, qtdAtual: 1 },
+            { name: 'Sal', qtdMensal: 2, qtdAtual: 1 },
+            { name: 'Açúcar', qtdMensal: 4, qtdAtual: 1 },
+            { name: 'Café', qtdMensal: 4, qtdAtual: 1 },
+            { name: 'Pão', qtdMensal: 4, qtdAtual: 1 },
         ]
     // [{ name: 'Arroz', qtdMinimal: { s: "1", m: "4", a: "" } }, 'Feijão', 'Macarrão', 'Sal', 'Açúcar', 'Café', 'Pão']
 

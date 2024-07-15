@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React, { useEffect, useState } from "react";
 import { Pressable, ProgressBarAndroidComponent, Text, View } from "react-native";
+import "./style.css"
 // import { ProgressBar, Colors } from 'react-native-paper';
 
 

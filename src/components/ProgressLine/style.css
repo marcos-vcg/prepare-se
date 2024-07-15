@@ -1,0 +1,15 @@
+.loading {
+  height: 100%;
+  background: #1b1a28;
+  border-radius: 4px;
+  animation: expandsWidth 2s forwards;
+}
+
+#keyframes expandsWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: calc(100% -20%);
+  }
+}
